@@ -1,0 +1,73 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Globe, Mail, Phone, MapPin } from 'lucide-react';
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-xl">T</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">TUAN Creations Inc.</h3>
+                <p className="text-gray-400">The United African Nation</p>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-4 max-w-md">
+              Building the United African Nation in Technology. A Pan-African ICT innovation 
+              enterprise designed to unify and transform the continent's digital economy.
+            </p>
+            <p className="text-green-400 font-semibold">"Africa Inspired!"</p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">About Us</Link></li>
+              <li><Link to="/divisions" className="text-gray-300 hover:text-green-400 transition-colors">Our Divisions</Link></li>
+              <li><Link to="/enrollment" className="text-gray-300 hover:text-green-400 transition-colors">Join Us</Link></li>
+              <li><Link to="/learning" className="text-gray-300 hover:text-green-400 transition-colors">Learning Platform</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-green-400" />
+                <span className="text-gray-300">tuancreations.africa@gmail.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-green-400" />
+                <span className="text-gray-300">+256 753 414 058</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-green-400" />
+                <span className="text-gray-300">Kampala, Uganda</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Globe className="w-4 h-4 text-green-400" />
+                <span className="text-gray-300">Pan-African Operations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2025 TUAN Creations Inc. All rights reserved. Building Africa's Digital Future.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
