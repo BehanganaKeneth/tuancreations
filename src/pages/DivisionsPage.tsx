@@ -64,11 +64,11 @@ const DivisionsPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-green-100 py-20">
+      <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">Our Innovation Divisions</h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold text-white mb-6">Our Innovation Divisions</h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               TUAN operates as a multi-division enterprise with each unit working under a central 
               governance model. Together, these divisions provide complete, interoperable services 
               across Africa's digital stack.
@@ -102,7 +102,7 @@ const DivisionsPage = () => {
                       <div className="space-y-2">
                         {division.services.map((service, serviceIndex) => (
                           <div key={serviceIndex} className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                             <span className="text-gray-700">{service}</span>
                           </div>
                         ))}
@@ -128,7 +128,7 @@ const DivisionsPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">🌳</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">We Build the Trunk</h3>
@@ -155,9 +155,9 @@ const DivisionsPage = () => {
       {/* Example Project */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Example: Digital Inclusion Initiative</h2>
-            <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+          <div className="bg-black p-8 rounded-2xl">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">Example: Digital Inclusion Initiative</h2>
+            <p className="text-lg text-gray-300 mb-8 text-center max-w-3xl mx-auto">
               When a ministry hires TUAN for a digital inclusion initiative, here's how our divisions collaborate:
             </p>
             
@@ -178,7 +178,7 @@ const DivisionsPage = () => {
                 <p className="text-sm text-gray-600">Leads content creation with production houses</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md">
-                <Wifi className="w-8 h-8 text-green-600 mb-3" />
+                <Wifi className="w-8 h-8 text-gray-600 mb-3" />
                 <h4 className="font-semibold text-gray-900 mb-2">Telecom Division</h4>
                 <p className="text-sm text-gray-600">Manages infrastructure with licensed partners</p>
               </div>

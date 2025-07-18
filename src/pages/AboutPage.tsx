@@ -18,11 +18,11 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-green-100 py-20">
+      <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">About TUAN Creations</h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold text-white mb-6">About TUAN Creations</h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               TUAN Creations Inc. (The United African Nation) is envisioned as a Pan-African ICT 
               innovation enterprise designed to unify and transform the continent's fragmented digital economy.
             </p>
@@ -41,10 +41,11 @@ const AboutPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl">
-              <Target className="w-16 h-16 text-green-600 mx-auto mb-4" />
+            <div className="text-center p-6 bg-black rounded-xl">
+              <Target className="w-16 h-16 text-white mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Solutions Engine</h3>
-              <p className="text-gray-600">Building scalable African technology products that solve real problems</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Solutions Engine</h3>
+              <p className="text-gray-300">Building scalable African technology products that solve real problems</p>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
               <Lightbulb className="w-16 h-16 text-blue-600 mx-auto mb-4" />
@@ -65,7 +66,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <Eye className="w-12 h-12 text-green-600 mb-6" />
+              <Eye className="w-12 h-12 text-gray-700 mb-6" />
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Vision</h3>
               <p className="text-lg text-gray-700">
                 To be the strategic hub of Africa's digital economy and transformation.
@@ -114,12 +115,12 @@ const AboutPage = () => {
       </section>
 
       {/* Business Model */}
-      <section className="py-20 bg-green-50">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Business Model</h2>
-            <p className="text-2xl text-green-600 font-semibold mb-4">Ecosystem-Led, Platform-Driven</p>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-6">Our Business Model</h2>
+            <p className="text-2xl text-white font-semibold mb-4">Ecosystem-Led, Platform-Driven</p>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               TUAN will be the trunk. Our trusted partners will be the branches.
             </p>
           </div>
@@ -127,25 +128,25 @@ const AboutPage = () => {
           <div className="bg-white p-8 rounded-2xl shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-2xl">1</span>
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Strategic Control</h4>
-                <p className="text-gray-600">We maintain quality, IP, and strategic direction</p>
+                <h4 className="text-xl font-semibold text-white mb-2">Strategic Control</h4>
+                <p className="text-gray-300">We maintain quality, IP, and strategic direction</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-2xl">2</span>
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Ecosystem Development</h4>
-                <p className="text-gray-600">Partners grow under TUAN's guidance and standards</p>
+                <h4 className="text-xl font-semibold text-white mb-2">Ecosystem Development</h4>
+                <p className="text-gray-300">Partners grow under TUAN's guidance and standards</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-2xl">3</span>
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Scalable Delivery</h4>
-                <p className="text-gray-600">Africa-led, structured, and accountable innovation</p>
+                <h4 className="text-xl font-semibold text-white mb-2">Scalable Delivery</h4>
+                <p className="text-gray-300">Africa-led, structured, and accountable innovation</p>
               </div>
             </div>
           </div>
@@ -161,17 +162,17 @@ const AboutPage = () => {
           
           <div className="space-y-6">
             {differentiators.map((point, index) => (
-              <div key={index} className="flex items-center space-x-4 p-6 bg-gradient-to-r from-green-50 to-green-100 rounded-xl">
-                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <div key={index} className="flex items-center space-x-4 p-6 bg-black rounded-xl">
+                <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold">✓</span>
                 </div>
-                <p className="text-lg text-gray-800 font-medium">{point}</p>
+                <p className="text-lg text-gray-300 font-medium">{point}</p>
               </div>
             ))}
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-2xl font-bold text-green-600">
+            <p className="text-2xl font-bold text-white">
               We are TUAN — The United African Nation in Innovation. And we are here to lead.
             </p>
           </div>

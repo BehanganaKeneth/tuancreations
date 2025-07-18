@@ -174,17 +174,17 @@ const LearningPlatform = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-green-100 py-20">
+      <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">TUAN Digital Academy</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <h1 className="text-5xl font-bold text-white mb-6">TUAN Digital Academy</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Learn cutting-edge technology skills from expert African trainers through live, 
               interactive sessions designed for the African context.
             </p>
             <button
               onClick={() => setIsLiveSession(true)}
-              className="inline-flex items-center px-8 py-4 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
             >
               <div className="w-3 h-3 bg-white rounded-full animate-pulse mr-3"></div>
               Join Live Session
@@ -200,7 +200,7 @@ const LearningPlatform = () => {
             {['All', 'AI/ML', 'Software', 'Media', 'IoT', 'Security', 'Aerospace'].map((category) => (
               <button
                 key={category}
-                className="px-6 py-2 bg-white border border-gray-300 rounded-full hover:bg-green-50 hover:border-green-300 transition-colors"
+                className="px-6 py-2 bg-white border border-gray-300 rounded-full hover:bg-gray-700 hover:border-gray-600 hover:text-white transition-colors"
               >
                 {category}
               </button>
@@ -224,6 +224,7 @@ const LearningPlatform = () => {
                   <div className="absolute top-4 left-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                       course.level === 'Beginner' ? 'bg-green-100 text-green-800' :
+                      course.level === 'Beginner' ? 'bg-gray-700 text-white' :
                       course.level === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
                       'bg-red-100 text-red-800'
                     }`}>
@@ -265,6 +266,7 @@ const LearningPlatform = () => {
                   
                   <div className="flex items-center justify-between mb-4 text-sm">
                     <div className="flex items-center space-x-1 text-green-600">
+                    <div className="flex items-center space-x-1 text-gray-400">
                       <Calendar className="w-4 h-4" />
                       <span>Next: {new Date(course.nextSession).toLocaleDateString()}</span>
                     </div>
@@ -272,6 +274,7 @@ const LearningPlatform = () => {
                   
                   <div className="flex space-x-3">
                     <button className="flex-1 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-sm font-semibold">
+                    <button className="flex-1 bg-gray-700 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors text-sm font-semibold">
                       Enroll Now
                     </button>
                     <button className="flex items-center justify-center w-12 h-10 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
@@ -294,29 +297,29 @@ const LearningPlatform = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Video className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Video className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Live Interactive Sessions</h3>
               <p className="text-gray-600">Real-time learning with expert instructors and peer interaction</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Expert African Trainers</h3>
               <p className="text-gray-600">Learn from industry leaders who understand the African context</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Practical Projects</h3>
               <p className="text-gray-600">Build real solutions for African challenges and opportunities</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-yellow-600" />
+              <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Certification Programs</h3>
               <p className="text-gray-600">Earn recognized certifications that advance your career</p>

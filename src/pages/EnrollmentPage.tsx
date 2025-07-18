@@ -24,7 +24,7 @@ const EnrollmentPage = () => {
       title: 'Become an Investor',
       icon: Building,
       description: 'Join us as a co-founder or shareholder in building Africa\'s digital future',
-      color: 'from-green-500 to-green-600'
+      color: 'from-gray-600 to-gray-700'
     },
     {
       id: 'partner',
@@ -93,7 +93,7 @@ ${formData.message}
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -104,7 +104,7 @@ ${formData.message}
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -117,7 +117,7 @@ ${formData.message}
               value={formData.phone}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -128,7 +128,7 @@ ${formData.message}
               value={formData.country}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -147,7 +147,7 @@ ${formData.message}
                 name="organization"
                 value={formData.organization}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
               />
             </div>
             <div>
@@ -156,7 +156,7 @@ ${formData.message}
                 name="investment"
                 value={formData.investment}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
               >
                 <option value="">Select investment type</option>
                 <option value="seed">Seed Investment ($10K - $100K)</option>
@@ -180,7 +180,7 @@ ${formData.message}
                 value={formData.organization}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
               />
             </div>
             <div>
@@ -189,7 +189,7 @@ ${formData.message}
                 name="interests"
                 value={formData.interests}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
               >
                 <option value="">Select your expertise</option>
                 <option value="software">Software Development</option>
@@ -212,7 +212,7 @@ ${formData.message}
                 name="experience"
                 value={formData.experience}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
               >
                 <option value="">Select your level</option>
                 <option value="beginner">Beginner (No prior experience)</option>
@@ -227,7 +227,7 @@ ${formData.message}
                 name="interests"
                 value={formData.interests}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
               >
                 <option value="">Select your interests</option>
                 <option value="ai-ml">AI & Machine Learning</option>
@@ -252,7 +252,7 @@ ${formData.message}
                 value={formData.organization}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
               />
             </div>
             <div>
@@ -261,7 +261,7 @@ ${formData.message}
                 name="interests"
                 value={formData.interests}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
               >
                 <option value="">Select service needed</option>
                 <option value="software">Custom Software Development</option>
@@ -283,7 +283,7 @@ ${formData.message}
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-lg text-center">
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+          <CheckCircle className="w-16 h-16 text-gray-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Application Submitted!</h2>
           <p className="text-gray-600 mb-6">
             Thank you for your interest in TUAN Creations. We'll review your application and get back to you within 48 hours.
@@ -303,7 +303,7 @@ ${formData.message}
                 message: ''
               });
             }}
-            className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            className="w-full bg-gray-700 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
           >
             Submit Another Application
           </button>
@@ -315,11 +315,11 @@ ${formData.message}
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-green-100 py-20">
+      <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">Join TUAN Creations</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h1 className="text-5xl font-bold text-white mb-6">Join TUAN Creations</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Whether you're an investor, partner, student, or client, there's a place for you 
               in building Africa's digital future.
             </p>
@@ -339,7 +339,7 @@ ${formData.message}
                   onClick={() => setSelectedType(type.id)}
                   className={`p-6 rounded-xl text-left transition-all ${
                     selectedType === type.id
-                      ? 'bg-white shadow-lg ring-2 ring-green-500'
+                      ? 'bg-white shadow-lg ring-2 ring-gray-500'
                       : 'bg-white shadow-md hover:shadow-lg'
                   }`}
                 >
@@ -377,14 +377,14 @@ ${formData.message}
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                     placeholder="Tell us more about your interest in TUAN Creations..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-green-600 text-white py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  className="w-full bg-gray-700 text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
                 >
                   Submit Application
                 </button>
