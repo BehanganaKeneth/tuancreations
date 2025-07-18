@@ -9,7 +9,7 @@ const LearningPlatform = () => {
     {
       id: 1,
       title: 'AI & Machine Learning Fundamentals',
-      instructor: 'Dr. Amara Okafor',
+      instructor: 'Ainamani Dickson',
       duration: '8 weeks',
       students: 245,
       rating: 4.8,
@@ -22,7 +22,7 @@ const LearningPlatform = () => {
     {
       id: 2,
       title: 'Mobile App Development with React Native',
-      instructor: 'Kwame Asante',
+      instructor: 'Irene Nakiyingi',
       duration: '10 weeks',
       students: 189,
       rating: 4.9,
@@ -35,7 +35,7 @@ const LearningPlatform = () => {
     {
       id: 3,
       title: 'Digital Media Production & Storytelling',
-      instructor: 'Fatima Al-Rashid',
+      instructor: 'Cissyln Musiimenta',
       duration: '6 weeks',
       students: 156,
       rating: 4.7,
@@ -48,7 +48,7 @@ const LearningPlatform = () => {
     {
       id: 4,
       title: 'IoT Solutions for Smart Cities',
-      instructor: 'Prof. Chidi Okwu',
+      instructor: 'Keneth Behangana',
       duration: '12 weeks',
       students: 98,
       rating: 4.6,
@@ -61,7 +61,7 @@ const LearningPlatform = () => {
     {
       id: 5,
       title: 'Cybersecurity for African Enterprises',
-      instructor: 'Sarah Mwangi',
+      instructor: 'Rwoth Ofwono',
       duration: '8 weeks',
       students: 134,
       rating: 4.8,
@@ -74,7 +74,7 @@ const LearningPlatform = () => {
     {
       id: 6,
       title: 'Aerospace Engineering Basics',
-      instructor: 'Dr. Kofi Mensah',
+      instructor: 'Praise Asiimire',
       duration: '14 weeks',
       students: 67,
       rating: 4.9,
