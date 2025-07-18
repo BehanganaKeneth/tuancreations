@@ -18,15 +18,9 @@ const Header = () => {
   return (
     <header className="bg-gradient-to-r from-green-600 to-green-800 text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-              <span className="text-green-600 font-bold text-xl">T</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">TUAN Creations Inc.</h1>
-              <p className="text-green-100 text-sm">The United African Nation</p>
-            </div>
+        <div className="flex justify-between items-center py-2">
+          <Link to="/" className="flex items-center">
+            <img src="/logo-black copy.png" alt="TUAN Creations Inc. Logo" className="h-16 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
