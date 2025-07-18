@@ -16,9 +16,11 @@ const HomePage = () => {
       <section className="bg-gradient-to-br from-green-50 to-green-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-full text-sm font-medium mb-6">
-              🟢 ENTERPRISE STRATEGY PROPOSAL
-            </div>
+            <img 
+              src="/logo-black copy.png" 
+              alt="TUAN Creations Inc. Logo" 
+              className="h-16 w-auto mx-auto mb-6"
+            />
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               TUAN Creations Inc.
             </h1>
