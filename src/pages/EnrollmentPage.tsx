@@ -93,7 +93,7 @@ ${formData.message}
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -104,7 +104,7 @@ ${formData.message}
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -117,7 +117,7 @@ ${formData.message}
               value={formData.phone}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -128,7 +128,7 @@ ${formData.message}
               value={formData.country}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -283,7 +283,7 @@ ${formData.message}
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-lg text-center">
-          <CheckCircle className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+          <CheckCircle className="w-16 h-16 text-teal-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Application Submitted!</h2>
           <p className="text-gray-600 mb-6">
             Thank you for your interest in TUAN Creations. We'll review your application and get back to you within 48 hours.
@@ -303,7 +303,7 @@ ${formData.message}
                 message: ''
               });
             }}
-            className="w-full bg-gray-700 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+            className="w-full bg-teal-500 text-white py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
           >
             Submit Another Application
           </button>
@@ -315,7 +315,7 @@ ${formData.message}
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-black py-20">
+      <section className="bg-indigo-700 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-6">Join TUAN Creations</h1>
@@ -328,7 +328,7 @@ ${formData.message}
       </section>
 
       {/* Enrollment Types */}
-      <section className="py-12">
+      <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {enrollmentTypes.map((type) => {
@@ -339,11 +339,11 @@ ${formData.message}
                   onClick={() => setSelectedType(type.id)}
                   className={`p-6 rounded-xl text-left transition-all ${
                     selectedType === type.id
-                      ? 'bg-white shadow-lg ring-2 ring-gray-500'
+                      ? 'bg-white shadow-lg ring-2 ring-teal-500'
                       : 'bg-white shadow-md hover:shadow-lg'
                   }`}
                 >
-                  <div className={`w-12 h-12 bg-gradient-to-r ${type.color} rounded-lg flex items-center justify-center mb-4`}>
+                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{type.title}</h3>
@@ -354,7 +354,7 @@ ${formData.message}
           </div>
 
           {/* Enrollment Form */}
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto bg-gray-100">
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -384,7 +384,7 @@ ${formData.message}
 
                 <button
                   type="submit"
-                  className="w-full bg-gray-700 text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+                  className="w-full bg-teal-500 text-white py-4 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
                 >
                   Submit Application
                 </button>
