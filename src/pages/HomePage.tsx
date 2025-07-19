@@ -96,7 +96,7 @@ const HomePage = () => {
             </p>
           </div>
           
-          <div className="bg-gray-900 rounded-lg p-8 text-center">
+          <div className="bg-gray-500 rounded-lg p-8 text-center">
           <div className="bg-indigo-800 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Transform Your Future</h3>
             <p className="text-gray-300 mb-6">
