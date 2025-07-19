@@ -52,7 +52,7 @@ const LearningPlatform = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-black text-white py-20">
+      <section className="bg-indigo-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -63,10 +63,10 @@ const LearningPlatform = () => {
               innovative learning experiences, and practical skills development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <button className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
                 Start Learning Today
               </button>
-              <button className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center">
+              <button className="bg-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors flex items-center justify-center">
                 <Play className="mr-2 h-5 w-5" />
                 Join Live Session
               </button>
@@ -76,7 +76,7 @@ const LearningPlatform = () => {
       </section>
 
       {/* Course Categories */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center mb-8">
             {categories.map((category) => (
@@ -85,8 +85,8 @@ const LearningPlatform = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors border ${
                   selectedCategory === category
-                    ? 'bg-gray-900 text-white border-gray-900'
-                    : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-700 hover:border-gray-600 hover:text-white'
+                    ? 'bg-teal-500 text-white border-teal-500'
+                    : 'bg-white text-gray-700 border-gray-300 hover:bg-teal-500 hover:border-teal-500 hover:text-white'
                 }`}
               >
                 {category}
@@ -97,7 +97,7 @@ const LearningPlatform = () => {
       </section>
 
       {/* Featured Courses */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Courses</h2>
@@ -116,7 +116,7 @@ const LearningPlatform = () => {
                 />
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="bg-gray-700 text-white text-xs px-2 py-1 rounded">
+                    <span className="bg-indigo-600 text-white text-xs px-2 py-1 rounded">
                       {course.level}
                     </span>
                     <div className="flex items-center">
@@ -144,7 +144,7 @@ const LearningPlatform = () => {
                     <p className="text-sm font-medium text-gray-600">{course.nextSession}</p>
                   </div>
                   
-                  <button className="w-full bg-gray-700 text-white py-2 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                  <button className="w-full bg-teal-500 text-white py-2 px-4 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
                     Enroll Now
                   </button>
                 </div>
@@ -155,7 +155,7 @@ const LearningPlatform = () => {
       </section>
 
       {/* Why Choose TUAN Digital Academy */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose TUAN Digital Academy?</h2>
@@ -166,7 +166,7 @@ const LearningPlatform = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-gray-700 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BookOpen className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Expert Instructors</h3>
@@ -174,7 +174,7 @@ const LearningPlatform = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-gray-700 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Global Perspective</h3>
@@ -182,7 +182,7 @@ const LearningPlatform = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-gray-700 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Certified Programs</h3>
@@ -190,7 +190,7 @@ const LearningPlatform = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-gray-700 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Practical Skills</h3>
@@ -201,13 +201,13 @@ const LearningPlatform = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gray-900 text-white py-20">
+      <section className="bg-indigo-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of African professionals who are already building the skills for tomorrow's economy.
           </p>
-          <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <button className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
             Start Your Learning Journey
           </button>
         </div>
