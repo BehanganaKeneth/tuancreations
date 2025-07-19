@@ -39,7 +39,7 @@ ${formData.message}
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-lg text-center">
-          <CheckCircle className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+          <CheckCircle className="w-16 h-16 text-teal-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Message Sent!</h2>
           <p className="text-gray-600 mb-6">
             Thank you for reaching out to TUAN Creations. We'll get back to you within 24 hours.
@@ -49,7 +49,7 @@ ${formData.message}
               setIsSubmitted(false);
               setFormData({ name: '', email: '', subject: '', message: '' });
             }}
-            className="w-full bg-gray-700 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+            className="w-full bg-teal-500 text-white py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
           >
             Send Another Message
           </button>
@@ -61,7 +61,7 @@ ${formData.message}
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-black py-20">
+      <section className="bg-indigo-700 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-6">Contact TUAN Creations</h1>
@@ -74,7 +74,7 @@ ${formData.message}
       </section>
 
       {/* Contact Information & Form */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -83,7 +83,7 @@ ${formData.message}
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -93,7 +93,7 @@ ${formData.message}
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -103,7 +103,7 @@ ${formData.message}
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -114,7 +114,7 @@ ${formData.message}
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Globe className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -161,7 +161,7 @@ ${formData.message}
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                     />
                   </div>
                   <div>
@@ -172,7 +172,7 @@ ${formData.message}
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -184,7 +184,7 @@ ${formData.message}
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   >
                     <option value="">Select a subject</option>
                     <option value="investment">Investment Opportunities</option>
@@ -204,14 +204,14 @@ ${formData.message}
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                     placeholder="Tell us about your inquiry, project requirements, or how we can help you..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gray-700 text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2"
+                  className="w-full bg-teal-500 text-white py-4 rounded-lg font-semibold hover:bg-teal-600 transition-colors flex items-center justify-center space-x-2"
                 >
                   <Send className="w-5 h-5" />
                   <span>Send Message</span>
@@ -223,7 +223,7 @@ ${formData.message}
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-indigo-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Build Africa's Digital Future?
@@ -235,14 +235,14 @@ ${formData.message}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:tuancreations.africa@gmail.com"
-              className="inline-flex items-center px-8 py-4 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors"
             >
               <Mail className="mr-2 w-5 h-5" />
               Email Us Directly
             </a>
             <a
               href="tel:+256753414058"
-              className="inline-flex items-center px-8 py-4 border-2 border-gray-700 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-white transition-colors"
+              className="inline-flex items-center px-8 py-4 border-2 border-indigo-300 text-indigo-100 font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition-colors"
             >
               <Phone className="mr-2 w-5 h-5" />
               Call Now
