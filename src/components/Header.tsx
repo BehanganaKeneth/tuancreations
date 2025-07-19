@@ -16,7 +16,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-black text-white shadow-lg sticky top-0 z-50">
+    <header className="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-2">
           <Link to="/" className="flex items-center mr-8">
@@ -33,8 +33,8 @@ const Header = () => {
                   to={item.href}
                   className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     location.pathname === item.href
-                      ? 'bg-green-700 text-white'
-                      : 'text-green-100 hover:bg-green-700 hover:text-white'
+                      ? 'bg-teal-500 text-white'
+                      : 'text-indigo-100 hover:bg-teal-500 hover:text-white'
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -47,7 +47,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md hover:bg-green-700"
+            className="md:hidden p-2 rounded-md hover:bg-teal-500"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -66,8 +66,8 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       location.pathname === item.href
-                        ? 'bg-green-700 text-white'
-                        : 'text-green-100 hover:bg-green-700 hover:text-white'
+                        ? 'bg-teal-500 text-white'
+                        : 'text-indigo-100 hover:bg-teal-500 hover:text-white'
                     }`}
                   >
                     <Icon className="w-4 h-4" />

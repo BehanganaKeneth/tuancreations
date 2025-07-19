@@ -4,7 +4,7 @@ import { Globe, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-indigo-700 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -14,17 +14,17 @@ const Footer = () => {
               Building the United African Nation in Technology. A Pan-African ICT innovation 
               enterprise designed to unify and transform the continent's digital economy.
             </p>
-            <p className="text-green-400 font-semibold">"Africa Inspired!"</p>
+            <p className="text-teal-400 font-semibold">"Africa Inspired!"</p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">About Us</Link></li>
-              <li><Link to="/divisions" className="text-gray-300 hover:text-green-400 transition-colors">Our Divisions</Link></li>
-              <li><Link to="/enrollment" className="text-gray-300 hover:text-green-400 transition-colors">Join Us</Link></li>
-              <li><Link to="/learning" className="text-gray-300 hover:text-green-400 transition-colors">Learning Platform</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-teal-400 transition-colors">About Us</Link></li>
+              <li><Link to="/divisions" className="text-gray-300 hover:text-teal-400 transition-colors">Our Divisions</Link></li>
+              <li><Link to="/enrollment" className="text-gray-300 hover:text-teal-400 transition-colors">Join Us</Link></li>
+              <li><Link to="/learning" className="text-gray-300 hover:text-teal-400 transition-colors">Learning Platform</Link></li>
             </ul>
           </div>
 
@@ -33,19 +33,19 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-green-400" />
+                <Mail className="w-4 h-4 text-teal-400" />
                 <span className="text-gray-300">tuancreations.africa@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-green-400" />
+                <Phone className="w-4 h-4 text-teal-400" />
                 <span className="text-gray-300">+256 753 414 058</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-green-400" />
+                <MapPin className="w-4 h-4 text-teal-400" />
                 <span className="text-gray-300">Kampala, Uganda</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Globe className="w-4 h-4 text-green-400" />
+                <Globe className="w-4 h-4 text-teal-400" />
                 <span className="text-gray-300">Pan-African Operations</span>
               </div>
             </div>

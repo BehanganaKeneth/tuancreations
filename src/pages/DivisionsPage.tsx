@@ -64,7 +64,7 @@ const DivisionsPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-black py-20">
+      <section className="bg-indigo-700 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-6">Our Innovation Divisions</h1>
@@ -78,7 +78,7 @@ const DivisionsPage = () => {
       </section>
 
       {/* Divisions Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {divisions.map((division, index) => {
@@ -87,7 +87,7 @@ const DivisionsPage = () => {
                 <div key={index} className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
                   <div className={`bg-gradient-to-r ${division.color} p-6`}>
                     <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+                      <div className="w-16 h-16 bg-white bg-opacity-30 rounded-xl flex items-center justify-center">
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                       <div>
@@ -102,7 +102,7 @@ const DivisionsPage = () => {
                       <div className="space-y-2">
                         {division.services.map((service, serviceIndex) => (
                           <div key={serviceIndex} className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                            <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
                             <span className="text-gray-700">{service}</span>
                           </div>
                         ))}
@@ -117,7 +117,7 @@ const DivisionsPage = () => {
       </section>
 
       {/* Coordination Model */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">How Our Divisions Work Together</h2>
@@ -128,21 +128,21 @@ const DivisionsPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">🌳</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">We Build the Trunk</h3>
               <p className="text-gray-600">TUAN departments lead their scope while partners form the branches, extending our reach.</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">🧑‍💼</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">We Lead, Partners Deliver</h3>
               <p className="text-gray-600">TUAN sets direction and maintains client communication while partners operate under our supervision.</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">⟳</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">We Coordinate, Not Compete</h3>
@@ -153,9 +153,9 @@ const DivisionsPage = () => {
       </section>
 
       {/* Example Project */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-black p-8 rounded-2xl">
+          <div className="bg-indigo-700 p-8 rounded-2xl">
             <h2 className="text-3xl font-bold text-white mb-6 text-center">Example: Digital Inclusion Initiative</h2>
             <p className="text-lg text-gray-300 mb-8 text-center max-w-3xl mx-auto">
               When a ministry hires TUAN for a digital inclusion initiative, here's how our divisions collaborate:
@@ -163,22 +163,22 @@ const DivisionsPage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-md">
-                <Brain className="w-8 h-8 text-blue-600 mb-3" />
+                <Brain className="w-8 h-8 text-teal-400 mb-3" />
                 <h4 className="font-semibold text-gray-900 mb-2">Software Division</h4>
                 <p className="text-sm text-gray-600">Leads platform development with partner engineers</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md">
-                <GraduationCap className="w-8 h-8 text-yellow-600 mb-3" />
+                <GraduationCap className="w-8 h-8 text-orange-400 mb-3" />
                 <h4 className="font-semibold text-gray-900 mb-2">Academy</h4>
                 <p className="text-sm text-gray-600">Designs curriculum with regional training centers</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md">
-                <Tv className="w-8 h-8 text-purple-600 mb-3" />
+                <Tv className="w-8 h-8 text-purple-400 mb-3" />
                 <h4 className="font-semibold text-gray-900 mb-2">Media Studio</h4>
                 <p className="text-sm text-gray-600">Leads content creation with production houses</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md">
-                <Wifi className="w-8 h-8 text-gray-600 mb-3" />
+                <Wifi className="w-8 h-8 text-indigo-300 mb-3" />
                 <h4 className="font-semibold text-gray-900 mb-2">Telecom Division</h4>
                 <p className="text-sm text-gray-600">Manages infrastructure with licensed partners</p>
               </div>
