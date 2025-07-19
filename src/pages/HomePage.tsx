@@ -102,7 +102,6 @@ const HomePage = () => {
             <p className="text-gray-300 mb-6">
               Access cutting-edge courses, connect with industry experts, and build the skills needed for Africa's digital economy.
             </p>
-            <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             <button className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
               Explore Learning Platform
             </button>
