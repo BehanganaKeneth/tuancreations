@@ -80,7 +80,6 @@ const HomePage = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join us in building a united, prosperous, and technologically advanced Africa.
           </p>
-          <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
           <button className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
             Get Started Today
           </button>
