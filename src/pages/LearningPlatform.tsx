@@ -3,45 +3,69 @@ import { Play, Users, Clock, Star, BookOpen, Award, Globe, Zap } from 'lucide-re
 
 const LearningPlatform = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const categories = ['All', 'Technology', 'Business', 'Leadership', 'Innovation'];
+  
+  const categories = ['All', 'Software & AI', 'Media & Digital', 'Telecom & IoT', 'Cloud & Security', 'Aerospace Tech'];
   
   const courses = [
     {
       id: 1,
-      title: 'African Digital Transformation',
-      instructor: 'Dr. Amara Okafor',
-      duration: '8 weeks',
-      students: 1250,
-      rating: 4.9,
-      level: 'Intermediate',
-      category: 'Technology',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400',
-      nextSession: 'Tomorrow, 2:00 PM'
+      title: 'Advanced AI & Machine Learning for African Contexts',
+      instructor: 'Dr. Aisha Rahman',
+      duration: '12 weeks',
+      students: 1500,
+      rating: 4.8,
+      level: 'Advanced',
+      category: 'Software & AI',
+      image: 'https://images.pexels.com/photos/7375/startup-photos.jpg?auto=compress&cs=tinysrgb&w=400',
+      nextSession: 'Starts Aug 1, 2025'
     },
     {
       id: 2,
-      title: 'Sustainable Business Models for Africa',
-      instructor: 'Prof. Kwame Asante',
-      duration: '6 weeks',
-      students: 890,
-      rating: 4.8,
-      level: 'Beginner',
-      category: 'Business',
-      image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400',
-      nextSession: 'Friday, 10:00 AM'
+      title: 'Digital Content Creation & Media Production',
+      instructor: 'Mr. David Okoro',
+      duration: '8 weeks',
+      students: 950,
+      rating: 4.7,
+      level: 'Intermediate',
+      category: 'Media & Digital',
+      image: 'https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=400',
+      nextSession: 'Starts Sep 15, 2025'
     },
     {
       id: 3,
-      title: 'Leadership in the Digital Age',
-      instructor: 'Dr. Fatima Al-Rashid',
-      duration: '4 weeks',
-      students: 2100,
+      title: 'IoT Solutions for Smart African Cities',
+      instructor: 'Eng. Naledi Mokoena',
+      duration: '10 weeks',
+      students: 720,
       rating: 4.9,
       level: 'Advanced',
-      category: 'Leadership',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400',
-      nextSession: 'Monday, 3:00 PM'
+      category: 'Telecom & IoT',
+      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400',
+      nextSession: 'Starts Oct 1, 2025'
+    },
+    {
+      id: 4,
+      title: 'Cybersecurity Fundamentals & Cloud Security',
+      instructor: 'Prof. Chidi Eze',
+      duration: '8 weeks',
+      students: 1100,
+      rating: 4.6,
+      level: 'Beginner',
+      category: 'Cloud & Security',
+      image: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=400',
+      nextSession: 'Starts Nov 1, 2025'
+    },
+    {
+      id: 5,
+      title: 'Introduction to Aerospace Engineering & UAVs',
+      instructor: 'Dr. Zara Khan',
+      duration: '14 weeks',
+      students: 580,
+      rating: 4.9,
+      level: 'Expert',
+      category: 'Aerospace Tech',
+      image: 'https://images.pexels.com/photos/236111/pexels-photo-236111.jpeg?auto=compress&cs=tinysrgb&w=400',
+      nextSession: 'Starts Jan 10, 2026'
     }
   ];
 
