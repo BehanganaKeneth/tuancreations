@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { memo, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Users, Globe, BookOpen } from 'lucide-react';
 
-const HomePage = () => {
+const HomePage = memo(() => {
+  const navigate = useNavigate();
+
+  const handleExploreVision = useCallback(() => {
+    navigate('/about');
+  }, [navigate]);
+
+  const handleJoinMovement = useCallback(() => {
+    navigate('/enrollment');
+  }, [navigate]);
+
+  const handleGetStarted = useCallback(() => {
+    navigate('/enrollment');
+  }, [navigate]);
+
+  const handleExploreLearning = useCallback(() => {
+    navigate('/learning');
+  }, [navigate]);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -19,10 +38,16 @@ const HomePage = () => {
             TUAN Creations Inc. is envisioned as a Pan-African ICT innovation enterprise designed to unify and transform the continent's fragmented digital economy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors flex items-center justify-center">
+            <button 
+              onClick={handleExploreVision}
+              className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors flex items-center justify-center"
+            >
               Explore Our Vision <ArrowRight className="ml-2 h-5 w-5" />
             </button>
-            <button className="border border-indigo-300 text-indigo-100 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors">
+            <button 
+              onClick={handleJoinMovement}
+              className="border border-indigo-300 text-indigo-100 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors"
+            >
               Join the Movement
             </button>
           </div>
@@ -80,7 +105,10 @@ const HomePage = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join us in building a united, prosperous, and technologically advanced Africa.
           </p>
-          <button className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
+          <button 
+            onClick={handleGetStarted}
+            className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
+          >
             Get Started Today
           </button>
         </div>
@@ -102,7 +130,10 @@ const HomePage = () => {
             <p className="text-gray-300 mb-6">
               Access cutting-edge courses, connect with industry experts, and build the skills needed for Africa's digital economy.
             </p>
-            <button className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
+            <button 
+              onClick={handleExploreLearning}
+              className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
+            >
               Explore Learning Platform
             </button>
           </div>
@@ -110,7 +141,9 @@ const HomePage = () => {
       </section>
     </div>
   );
-};
+});
+
+HomePage.displayName = 'HomePage';
 
 export default HomePage;
   )

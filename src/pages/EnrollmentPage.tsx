@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Users, Building, GraduationCap, Briefcase, CheckCircle } from 'lucide-react';
 
-const EnrollmentPage = () => {
+const EnrollmentPage = memo(() => {
   const [searchParams] = useSearchParams();
   const [selectedType, setSelectedType] = useState(searchParams.get('type') || 'investor');
   const [formData, setFormData] = useState({
@@ -49,14 +49,14 @@ const EnrollmentPage = () => {
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData(prev => ({
+      ...prev,
       [e.target.name]: e.target.value
-    });
-  };
+    }));
+  }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     // Create mailto link with form data
     const subject = `TUAN Creations Application - ${enrollmentTypes.find(t => t.id === selectedType)?.title}`;
@@ -79,7 +79,22 @@ ${formData.message}
     const mailtoLink = `mailto:tuancreations.africa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink, '_blank');
     setIsSubmitted(true);
-  };
+  }, [formData, selectedType, enrollmentTypes]);
+
+  const resetForm = useCallback(() => {
+    setIsSubmitted(false);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      organization: '',
+      country: '',
+      experience: '',
+      interests: '',
+      investment: '',
+      message: ''
+    });
+  }, []);
 
   const getFormFields = () => {
     const commonFields = (
@@ -289,20 +304,7 @@ ${formData.message}
             Thank you for your interest in TUAN Creations. We'll review your application and get back to you within 48 hours.
           </p>
           <button
-            onClick={() => {
-              setIsSubmitted(false);
-              setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                organization: '',
-                country: '',
-                experience: '',
-                interests: '',
-                investment: '',
-                message: ''
-              });
-            }}
+            onClick={resetForm}
             className="w-full bg-teal-500 text-white py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
           >
             Submit Another Application
@@ -395,6 +397,8 @@ ${formData.message}
       </section>
     </div>
   );
-};
+});
+
+EnrollmentPage.displayName = 'EnrollmentPage';
 
 export default EnrollmentPage;

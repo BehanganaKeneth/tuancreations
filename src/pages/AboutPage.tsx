@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Target, Eye, Lightbulb, Users, Globe, Rocket } from 'lucide-react';
 
-const AboutPage = () => {
+const AboutPage = memo(() => {
   const problems = [
     { icon: Globe, title: 'Fragmented Infrastructure', description: 'No unified digital ecosystem connecting stakeholders' },
     { icon: Users, title: 'Limited Tools & Access', description: 'Talented youths and entrepreneurs lack access to professional software, innovation labs, and connectivity' },
@@ -178,7 +178,7 @@ const AboutPage = () => {
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-2xl font-bold text-indigo-100">
+            <p className="text-2xl font-bold text-gray-900">
               We are TUAN — The United African Nation in Innovation. And we are here to lead.
             </p>
           </div>
@@ -186,6 +186,8 @@ const AboutPage = () => {
       </section>
     </div>
   );
-};
+});
+
+AboutPage.displayName = 'AboutPage';
 
 export default AboutPage;

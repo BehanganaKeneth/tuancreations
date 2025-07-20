@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Brain, Tv, Wifi, Rocket, Shield, GraduationCap, Users, Building } from 'lucide-react';
 
-const DivisionsPage = () => {
+const DivisionsPage = memo(() => {
   const divisions = [
     {
       icon: Brain,
@@ -188,6 +188,8 @@ const DivisionsPage = () => {
       </section>
     </div>
   );
-};
+});
+
+DivisionsPage.displayName = 'DivisionsPage';
 
 export default DivisionsPage;

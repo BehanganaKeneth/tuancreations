@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe, Users, BookOpen, Mail } from 'lucide-react';
 
-const Header = () => {
+const Header = memo(() => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsMenuOpen(false);
+  }, []);
 
   const navigation = [
     { name: 'Home', href: '/', icon: Globe },
@@ -46,7 +54,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={toggleMenu}
             className="md:hidden p-2 rounded-md hover:bg-teal-500"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -63,7 +71,7 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={closeMenu}
                     className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       location.pathname === item.href
                         ? 'bg-teal-500 text-white'
@@ -81,6 +89,8 @@ const Header = () => {
       </div>
     </header>
   );
-};
+});
+
+Header.displayName = 'Header';
 
 export default Header;

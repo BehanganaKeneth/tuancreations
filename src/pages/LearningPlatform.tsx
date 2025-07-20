@@ -1,12 +1,63 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo, useMemo } from 'react';
 import { Play, Users, Clock, Star, BookOpen, Award, Globe, Zap } from 'lucide-react';
 
-const LearningPlatform = () => {
+// Memoized course card component
+const CourseCard = memo(({ course }: { course: any }) => (
+  <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+    <img 
+      src={course.image} 
+      alt={course.title}
+      className="w-full h-48 object-cover"
+      loading="lazy"
+    />
+    <div className="p-6">
+      <div className="flex items-center justify-between mb-2">
+        <span className="bg-indigo-600 text-white text-xs px-2 py-1 rounded">
+          {course.level}
+        </span>
+        <div className="flex items-center">
+          <Star className="h-4 w-4 text-yellow-400 fill-current" />
+          <span className="ml-1 text-sm text-gray-600">{course.rating}</span>
+        </div>
+      </div>
+      
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{course.title}</h3>
+      <p className="text-gray-600 mb-4">by {course.instructor}</p>
+      
+      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+        <div className="flex items-center">
+          <Clock className="h-4 w-4 mr-1" />
+          {course.duration}
+        </div>
+        <div className="flex items-center">
+          <Users className="h-4 w-4 mr-1" />
+          {course.students.toLocaleString()} students
+        </div>
+      </div>
+      
+      <div className="mb-4">
+        <p className="text-sm text-gray-400">Next Session:</p>
+        <p className="text-sm font-medium text-gray-600">{course.nextSession}</p>
+      </div>
+      
+      <button className="w-full bg-teal-500 text-white py-2 px-4 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
+        Enroll Now
+      </button>
+    </div>
+  </div>
+));
+
+CourseCard.displayName = 'CourseCard';
+
+const LearningPlatform = memo(() => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   
-  const categories = ['All', 'Software & AI', 'Media & Digital', 'Telecom & IoT', 'Cloud & Security', 'Aerospace Tech'];
+  const categories = useMemo(() => 
+    ['All', 'Software & AI', 'Media & Digital', 'Telecom & IoT', 'Cloud & Security', 'Aerospace Tech'],
+    []
+  );
   
-  const courses = [
+  const courses = useMemo(() => [
     {
       id: 1,
       title: 'Advanced AI & Machine Learning for African Contexts',
@@ -67,11 +118,19 @@ const LearningPlatform = () => {
       image: 'https://images.pexels.com/photos/236111/pexels-photo-236111.jpeg?auto=compress&cs=tinysrgb&w=400',
       nextSession: 'Starts Jan 10, 2026'
     }
-  ];
+  ], []);
 
-  const filteredCourses = selectedCategory === 'All' 
-    ? courses 
-    : courses.filter(course => course.category === selectedCategory);
+  const filteredCourses = useMemo(() => 
+    selectedCategory === 'All' 
+      ? courses 
+      : courses.filter(course => course.category === selectedCategory),
+    [selectedCategory, courses]
+  );
+
+  const handleCategoryChange = useCallback((category: string) => {
+    setSelectedCategory(category);
+  }, []);
+
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -106,7 +165,7 @@ const LearningPlatform = () => {
             {categories.map((category) => (
               <button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => handleCategoryChange(category)}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors border ${
                   selectedCategory === category
                     ? 'bg-teal-500 text-white border-teal-500'
@@ -132,47 +191,7 @@ const LearningPlatform = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((course) => (
-              <div key={course.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img 
-                  src={course.image} 
-                  alt={course.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="bg-indigo-600 text-white text-xs px-2 py-1 rounded">
-                      {course.level}
-                    </span>
-                    <div className="flex items-center">
-                      <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                      <span className="ml-1 text-sm text-gray-600">{course.rating}</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{course.title}</h3>
-                  <p className="text-gray-600 mb-4">by {course.instructor}</p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {course.duration}
-                    </div>
-                    <div className="flex items-center">
-                      <Users className="h-4 w-4 mr-1" />
-                      {course.students.toLocaleString()} students
-                    </div>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <p className="text-sm text-gray-400">Next Session:</p>
-                    <p className="text-sm font-medium text-gray-600">{course.nextSession}</p>
-                  </div>
-                  
-                  <button className="w-full bg-teal-500 text-white py-2 px-4 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
-                    Enroll Now
-                  </button>
-                </div>
-              </div>
+              <CourseCard key={course.id} course={course} />
             ))}
           </div>
         </div>
@@ -238,6 +257,8 @@ const LearningPlatform = () => {
       </section>
     </div>
   );
-};
+});
+
+LearningPlatform.displayName = 'LearningPlatform';
 
 export default LearningPlatform;

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import { Mail, Phone, MapPin, Globe, Send, CheckCircle } from 'lucide-react';
 
-const ContactPage = () => {
+const ContactPage = memo(() => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,14 +10,14 @@ const ContactPage = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData(prev => ({
+      ...prev,
       [e.target.name]: e.target.value
-    });
-  };
+    }));
+  }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     // Create mailto link with form data
     const subject = formData.subject ? `Contact: ${formData.subject}` : 'Contact Inquiry';
@@ -33,7 +33,12 @@ ${formData.message}
     const mailtoLink = `mailto:tuancreations.africa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink, '_blank');
     setIsSubmitted(true);
-  };
+  }, [formData]);
+
+  const resetForm = useCallback(() => {
+    setIsSubmitted(false);
+    setFormData({ name: '', email: '', subject: '', message: '' });
+  }, []);
 
   if (isSubmitted) {
     return (
@@ -45,10 +50,7 @@ ${formData.message}
             Thank you for reaching out to TUAN Creations. We'll get back to you within 24 hours.
           </p>
           <button
-            onClick={() => {
-              setIsSubmitted(false);
-              setFormData({ name: '', email: '', subject: '', message: '' });
-            }}
+            onClick={resetForm}
             className="w-full bg-teal-500 text-white py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
           >
             Send Another Message
@@ -252,6 +254,8 @@ ${formData.message}
       </section>
     </div>
   );
-};
+});
+
+ContactPage.displayName = 'ContactPage';
 
 export default ContactPage;
