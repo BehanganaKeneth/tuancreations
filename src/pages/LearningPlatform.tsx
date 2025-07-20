@@ -117,7 +117,7 @@ const LearningPlatform = memo(() => {
       category: 'Aerospace Tech',
       image: 'https://images.pexels.com/photos/236111/pexels-photo-236111.jpeg?auto=compress&cs=tinysrgb&w=400',
       nextSession: 'Starts Jan 10, 2026'
-    }
+    },
     {
       id: 6,
       title: 'Web and Mobile Apps Development',
@@ -142,7 +142,6 @@ const LearningPlatform = memo(() => {
   const handleCategoryChange = useCallback((category: string) => {
     setSelectedCategory(category);
   }, []);
-
 
   return (
     <div className="min-h-screen bg-gray-50">
