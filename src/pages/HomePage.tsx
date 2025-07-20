@@ -125,17 +125,18 @@ const HomePage = memo(() => {
           </div>
           
           <div className="bg-gray-500 rounded-lg p-8 text-center">
-          <div className="bg-indigo-800 rounded-lg p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4">Transform Your Future</h3>
-            <p className="text-gray-300 mb-6">
-              Access cutting-edge courses, connect with industry experts, and build the skills needed for Africa's digital economy.
-            </p>
-            <button 
-              onClick={handleExploreLearning}
-              className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
-            >
-              Explore Learning Platform
-            </button>
+            <div className="bg-indigo-800 rounded-lg p-8 text-center">
+              <h3 className="text-2xl font-bold mb-4">Transform Your Future</h3>
+              <p className="text-gray-300 mb-6">
+                Access cutting-edge courses, connect with industry experts, and build the skills needed for Africa's digital economy.
+              </p>
+              <button 
+                onClick={handleExploreLearning}
+                className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
+              >
+                Explore Learning Platform
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -144,12 +145,4 @@ const HomePage = memo(() => {
 });
 
 HomePage.displayName = 'HomePage';
-
 export default HomePage;
-  )
-}
-  )
-}
-  )
-}
-)
