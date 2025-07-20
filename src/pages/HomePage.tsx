@@ -16,7 +16,7 @@ const HomePage = () => {
             Building <span className="text-teal-300">The United African Nation</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            A comprehensive enterprise strategy to unite Africa through technology, education, and sustainable development.
+            TUAN Creations Inc. is envisioned as a Pan-African ICT innovation enterprise designed to unify and transform the continent's fragmented digital economy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors flex items-center justify-center">

@@ -4,9 +4,10 @@ import { Target, Eye, Lightbulb, Users, Globe, Rocket } from 'lucide-react';
 const AboutPage = () => {
   const problems = [
     { icon: Globe, title: 'Fragmented Infrastructure', description: 'No unified digital ecosystem connecting stakeholders' },
-    { icon: Users, title: 'Limited Tools & Access', description: 'Talented youths and entrepreneurs lack access to professional software and innovation labs' },
+    { icon: Users, title: 'Limited Tools & Access', description: 'Talented youths and entrepreneurs lack access to professional software, innovation labs, and connectivity' },
     { icon: Lightbulb, title: 'Under-supported Talent', description: 'Creatives and developers have skills, but no enterprise to nurture or scale them' },
     { icon: Rocket, title: 'Neglected Frontier Tech', description: 'Robotics, aerospace, AI, and chip design are underrepresented in African markets' },
+    { icon: Globe, title: 'Dependence on Foreign Tech', description: 'From infrastructure to apps to media, African IP remains rare and undervalued' },
   ];
 
   const differentiators = [
@@ -36,7 +37,7 @@ const AboutPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Identity: Who We Intend to Be</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-              Driven by a bold vision, TUAN is positioned to be a transformative force in Africa's digital landscape.
+              Driven by a bold vision, TUAN is positioned to be:
             </p>
           </div>
           
@@ -44,7 +45,7 @@ const AboutPage = () => {
             <div className="text-center p-6 bg-indigo-600 rounded-xl">
               <Target className="w-16 h-16 text-white mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Solutions Engine</h3>
-              <p className="text-indigo-100">Building scalable African technology products that solve real problems</p>
+              <p className="text-indigo-100">Building scalable African technology products</p>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-md">
               <Lightbulb className="w-16 h-16 text-teal-500 mx-auto mb-4" />
@@ -56,6 +57,12 @@ const AboutPage = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation Powerhouse</h3>
               <p className="text-gray-600">Driving continental innovation with Africa-first growth strategies</p>
             </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              We are not a freelance platform or gig economy tool. TUAN is a full-scale enterprise, committed to delivery, leadership, and transformation.
+            </p>
           </div>
         </div>
       </section>
