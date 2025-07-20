@@ -71,7 +71,7 @@ const HomePage = memo(() => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Unity & Governance</h3>
               <p className="text-gray-600">
-                Establishing unified governance structures and policies that promote collaboration across African nations.
+                Building shared systems, values, and collaborations that foster trust, efficiency, and unity across African communities.
               </p>
             </div>
 
