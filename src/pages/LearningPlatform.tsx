@@ -61,19 +61,19 @@ const LearningPlatform = memo(() => {
     {
       id: 1,
       title: 'Advanced AI & Machine Learning for African Contexts',
-      instructor: 'Dr. Aisha Rahman',
+      instructor: 'Eng. Godwin Ofwono and Eng. Cissyln Musiimenta',
       duration: '12 weeks',
       students: 1500,
       rating: 4.8,
       level: 'Advanced',
       category: 'Software & AI',
       image: 'https://images.pexels.com/photos/7375/startup-photos.jpg?auto=compress&cs=tinysrgb&w=400',
-      nextSession: 'Starts Aug 1, 2025'
+      nextSession: 'Starts Oct 1, 2025'
     },
     {
       id: 2,
       title: 'Digital Content Creation & Media Production',
-      instructor: 'Mr. David Okoro',
+      instructor: 'Eng. Dickson Ainamani',
       duration: '8 weeks',
       students: 950,
       rating: 4.7,
@@ -85,19 +85,19 @@ const LearningPlatform = memo(() => {
     {
       id: 3,
       title: 'IoT Solutions for Smart African Cities',
-      instructor: 'Eng. Naledi Mokoena',
+      instructor: 'Eng. Joshua Ssali',
       duration: '10 weeks',
       students: 720,
       rating: 4.9,
       level: 'Advanced',
       category: 'Telecom & IoT',
       image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400',
-      nextSession: 'Starts Oct 1, 2025'
+      nextSession: 'Starts Nov 1, 2025'
     },
     {
       id: 4,
       title: 'Cybersecurity Fundamentals & Cloud Security',
-      instructor: 'Prof. Chidi Eze',
+      instructor: 'Eng. Gift Benson',
       duration: '8 weeks',
       students: 1100,
       rating: 4.6,
@@ -109,13 +109,25 @@ const LearningPlatform = memo(() => {
     {
       id: 5,
       title: 'Introduction to Aerospace Engineering & UAVs',
-      instructor: 'Dr. Zara Khan',
+      instructor: 'Eng. Keneth Behangana',
       duration: '14 weeks',
       students: 580,
       rating: 4.9,
       level: 'Expert',
       category: 'Aerospace Tech',
       image: 'https://images.pexels.com/photos/236111/pexels-photo-236111.jpeg?auto=compress&cs=tinysrgb&w=400',
+      nextSession: 'Starts Jan 10, 2026'
+    }
+    {
+      id: 6,
+      title: 'Web and Mobile Apps Development',
+      instructor: 'Dr. Irene Nakiyingi',
+      duration: '14 weeks',
+      students: 580,
+      rating: 4.9,
+      level: 'Expert',
+      category: 'Software & AI',
+      image: 'https://images.pexels.com/photos/7375/startup-photos.jpg?auto=compress&cs=tinysrgb&w=400',
       nextSession: 'Starts Jan 10, 2026'
     }
   ], []);
