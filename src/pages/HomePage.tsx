@@ -27,7 +27,7 @@ const HomePage = memo(() => {
       <section className="bg-indigo-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <img 
-            src="/logo.png" 
+            src="/logo-black copy copy.png" 
             alt="TUAN Logo" 
             className="h-16 w-auto mx-auto mb-6"
           />
@@ -63,7 +63,7 @@ const HomePage = memo(() => {
               The foundation of our strategy rests on three interconnected pillars that will transform Africa's future.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <div className="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -74,7 +74,7 @@ const HomePage = memo(() => {
                 Establishing unified governance structures and policies that promote collaboration across African nations.
               </p>
             </div>
-            
+
             <div className="text-center p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <div className="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Globe className="h-8 w-8" />
@@ -84,7 +84,7 @@ const HomePage = memo(() => {
                 Leveraging cutting-edge technology to drive economic growth and digital transformation across the continent.
               </p>
             </div>
-            
+
             <div className="text-center p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <div className="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <BookOpen className="h-8 w-8" />
@@ -123,7 +123,7 @@ const HomePage = memo(() => {
               Empowering the next generation of African leaders through world-class digital education and training programs.
             </p>
           </div>
-          
+
           <div className="bg-gray-500 rounded-lg p-8 text-center">
             <div className="bg-indigo-800 rounded-lg p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">Transform Your Future</h3>
