@@ -1,5 +1,5 @@
 import React, { useState, useCallback, memo, useMemo } from 'react';
-import { Play, Users, Clock, Star, BookOpen, Award, Globe, Zap, useNavigate } from 'lucide-react';
+import { Play, Users, Clock, Star, BookOpen, Award, Globe, Zap, Navigation as useNavigate } from 'lucide-react';
 
 
 // Memoized course card component
