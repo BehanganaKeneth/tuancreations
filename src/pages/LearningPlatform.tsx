@@ -3,7 +3,7 @@ import { Play, Users, Clock, Star, BookOpen, Award, Globe, Zap } from 'lucide-re
 import { useNavigate } from 'react-router-dom';
 
 // Memoized course card component
-const CourseCard = memo(({ course }: { course: any }) => (
+const CourseCard = memo(({ course, onEnroll }: { course: any; onEnroll: () => void }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
     <img
       src={course.image}
@@ -37,7 +37,10 @@ const CourseCard = memo(({ course }: { course: any }) => (
         <p className="text-sm text-gray-400">Next Session:</p>
         <p className="text-sm font-medium text-gray-600">{course.nextSession}</p>
       </div>
-      <button className="w-full bg-teal-500 text-white py-2 px-4 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
+      <button 
+        onClick={onEnroll}
+        className="w-full bg-teal-500 text-white py-2 px-4 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
+      >
         Enroll Now
       </button>
     </div>
@@ -160,6 +163,10 @@ const LearningPlatform = memo(() => {
     navigate('/live-session');
   }, [navigate]);
 
+  const handleEnrollInCourse = useCallback(() => {
+    navigate('/enrollment?type=student');
+  }, [navigate]);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -213,7 +220,7 @@ const LearningPlatform = memo(() => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
+              <CourseCard key={course.id} course={course} onEnroll={handleEnrollInCourse} />
             ))}
           </div>
         </div>
