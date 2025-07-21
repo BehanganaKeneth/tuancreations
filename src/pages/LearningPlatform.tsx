@@ -1,5 +1,6 @@
 import React, { useState, useCallback, memo, useMemo } from 'react';
-import { Play, Users, Clock, Star, BookOpen, Award, Globe, Zap } from 'lucide-react';
+import { Play, Users, Clock, Star, BookOpen, Award, Globe, Zap, useNavigate } from 'lucide-react';
+
 
 // Memoized course card component
 const CourseCard = memo(({ course }: { course: any }) => (
@@ -51,6 +52,7 @@ CourseCard.displayName = 'CourseCard';
 
 const LearningPlatform = memo(() => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const navigate = useNavigate();
   
   const categories = useMemo(() => 
     ['All', 'Software & AI', 'Media & Digital', 'Telecom & IoT', 'Cloud & Security', 'Aerospace Tech'],
@@ -143,6 +145,14 @@ const LearningPlatform = memo(() => {
     setSelectedCategory(category);
   }, []);
 
+  const handleStartLearningToday = useCallback(() => {
+    navigate('/enrollment?type=student');
+  }, [navigate]);
+
+  const handleJoinLiveSession = useCallback(() => {
+    navigate('/live-session');
+  }, [navigate]);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -157,10 +167,16 @@ const LearningPlatform = memo(() => {
               innovative learning experiences, and practical skills development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors">
+              <button 
+                onClick={handleStartLearningToday}
+                className="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
+              >
                 Start Learning Today
               </button>
-              <button className="bg-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors flex items-center justify-center">
+              <button 
+                onClick={handleJoinLiveSession}
+                className="bg-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors flex items-center justify-center"
+              >
                 <Play className="mr-2 h-5 w-5" />
                 Join Live Session
               </button>
