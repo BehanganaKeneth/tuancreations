@@ -24,7 +24,7 @@ const AboutPage = memo(() => {
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-6">About TUAN Creations</h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              TUAN Creations Inc. (The United African Nation) is envisioned as a Pan-African ICT 
+              TUAN Creations (Africa) LTD (TUAN = The United African Nation) is envisioned as a Pan-African ICT 
               innovation enterprise designed to unify and transform the continent's fragmented digital economy.
             </p>
           </div>
