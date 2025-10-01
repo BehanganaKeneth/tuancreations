@@ -54,7 +54,7 @@ const Footer = memo(() => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 TUAN Creations (Africa) LTD. All rights reserved. Building Africa's Digital Future.
+            © 2025 TUAN Creations (Africa) LTD. All rights reserved. Building Africa's Digital Future Together!.
           </p>
         </div>
       </div>
