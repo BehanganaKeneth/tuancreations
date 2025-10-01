@@ -28,6 +28,11 @@ const Header = memo(() => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-2">
           <Link to="/" className="flex items-center mr-8">
+            <img 
+            src="/logo-black copy copy.png" 
+            alt="TUAN Logo" 
+            className="h-16 w-auto mx-auto mb-6"
+          />
             <span className="text-2xl font-bold text-white">TUAN Creations (Africa) LTD</span>
           </Link>
 
