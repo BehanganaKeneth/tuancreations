@@ -82,7 +82,7 @@ const LearningPlatform = memo(() => {
       {
         id: 2,
         title: 'Digital Content Creation & Media Production',
-        instructor: 'Eng. Dickson Ainamani',
+        instructor: 'Eng. Keneth Behangana',
         duration: '8 weeks',
         students: 950,
         rating: 4.7,
