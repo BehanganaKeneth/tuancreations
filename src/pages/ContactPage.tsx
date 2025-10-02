@@ -135,7 +135,7 @@ ${formData.message}
                 <div className="space-y-2 text-gray-600">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM WAT</span>
+                    <span>9:00 AM - 6:00 PM EAT/WAT/CVT/SAST/SCT/MUT/CAT</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Saturday</span>
